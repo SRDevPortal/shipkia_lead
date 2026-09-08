@@ -1,0 +1,107 @@
+{
+ "doctype": "DocType",
+ "name": "ShipKia Sync Log",
+ "module": "Shipkia Lead",
+ "autoname": "hash",
+ "engine": "InnoDB",
+ "field_order": [
+  "connection",
+  "status",
+  "started_at",
+  "finished_at",
+  "since",
+  "page",
+  "pages_processed",
+  "records_seen",
+  "records_changed",
+  "records_applied",
+  "attempt",
+  "job_id",
+  "last_error"
+ ],
+ "fields": [
+  {
+   "fieldname": "connection",
+   "label": "API Connection",
+   "fieldtype": "Link",
+   "options": "ShipKia API Connection",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "status",
+   "label": "Status",
+   "fieldtype": "Select",
+   "options": "Queued\nRunning\nRetrying\nCompleted\nFailed\nStopped",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "started_at",
+   "label": "Started At",
+   "fieldtype": "Datetime"
+  },
+  {
+   "fieldname": "finished_at",
+   "label": "Finished At",
+   "fieldtype": "Datetime"
+  },
+  {
+   "fieldname": "since",
+   "label": "Incremental Checkpoint",
+   "fieldtype": "Datetime"
+  },
+  {
+   "fieldname": "page",
+   "label": "Next Page",
+   "fieldtype": "Int"
+  },
+  {
+   "fieldname": "pages_processed",
+   "label": "Pages Processed",
+   "fieldtype": "Int"
+  },
+  {
+   "fieldname": "records_seen",
+   "label": "Records Seen",
+   "fieldtype": "Int"
+  },
+  {
+   "fieldname": "records_changed",
+   "label": "Records Changed",
+   "fieldtype": "Int"
+  },
+  {
+   "fieldname": "records_applied",
+   "label": "Records Applied",
+   "fieldtype": "Int"
+  },
+  {
+   "fieldname": "attempt",
+   "label": "Retry Attempt",
+   "fieldtype": "Int"
+  },
+  {
+   "fieldname": "job_id",
+   "label": "Job ID",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "last_error",
+   "label": "Last Error",
+   "fieldtype": "Small Text"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "report": 1,
+   "export": 1
+  }
+ ],
+ "track_changes": 0,
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

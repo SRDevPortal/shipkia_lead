@@ -1,0 +1,1 @@
+recursive-include shipkia_lead *.json *.js *.txt *.md

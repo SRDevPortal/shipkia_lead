@@ -1,0 +1,92 @@
+{
+ "doctype": "DocType",
+ "name": "ShipKia Match Queue",
+ "module": "Shipkia Lead",
+ "autoname": "hash",
+ "fields": [
+  {
+   "fieldname": "reference_doctype",
+   "label": "Record Type",
+   "fieldtype": "Data",
+   "read_only": 1
+  },
+  {
+   "fieldname": "reference_name",
+   "label": "Record",
+   "fieldtype": "Data",
+   "read_only": 1
+  },
+  {
+   "fieldname": "status",
+   "label": "Status",
+   "fieldtype": "Select",
+   "read_only": 1,
+   "options": "Pending\nRetrying\nDone\nFailed",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "generation",
+   "label": "Generation",
+   "fieldtype": "Int",
+   "read_only": 1
+  },
+  {
+   "fieldname": "attempts",
+   "label": "Attempts",
+   "fieldtype": "Int",
+   "read_only": 1
+  },
+  {
+   "fieldname": "due_at",
+   "label": "Next Attempt",
+   "fieldtype": "Datetime",
+   "read_only": 1
+  },
+  {
+   "fieldname": "requested_at",
+   "label": "Requested At",
+   "fieldtype": "Datetime",
+   "read_only": 1
+  },
+  {
+   "fieldname": "finished_at",
+   "label": "Finished At",
+   "fieldtype": "Datetime",
+   "read_only": 1
+  },
+  {
+   "fieldname": "result",
+   "label": "Result",
+   "fieldtype": "Small Text",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "last_error",
+   "label": "Last Error",
+   "fieldtype": "Small Text",
+   "read_only": 1
+  }
+ ],
+ "field_order": [
+  "reference_doctype",
+  "reference_name",
+  "status",
+  "generation",
+  "attempts",
+  "due_at",
+  "requested_at",
+  "finished_at",
+  "result",
+  "last_error"
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "report": 1
+  }
+ ],
+ "sort_field": "requested_at",
+ "sort_order": "DESC"
+}

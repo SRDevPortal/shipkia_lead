@@ -1,0 +1,270 @@
+{
+ "doctype": "DocType",
+ "name": "ShipKia API Connection",
+ "module": "Shipkia Lead",
+ "autoname": "field:connection_name",
+ "engine": "InnoDB",
+ "field_order": [
+  "connection_name",
+  "environment",
+  "enabled",
+  "scheduled_sync",
+  "sync_interval",
+  "endpoint",
+  "http_method",
+  "allow_test_http",
+  "auth_header",
+  "auth_prefix",
+  "api_key",
+  "mapping_section",
+  "records_path",
+  "field_mapping",
+  "pagination_mode",
+  "page_parameter",
+  "size_parameter",
+  "page_size",
+  "first_page",
+  "max_pages",
+  "total_pages_path",
+  "has_more_path",
+  "updated_since_parameter",
+  "onboarded_values",
+  "apply_updates",
+  "last_success",
+  "checkpoint",
+  "next_sync",
+  "active_run",
+  "last_error",
+  "allow_testing_updates",
+  "onboarded_on_id",
+  "active_slot"
+ ],
+ "fields": [
+  {
+   "fieldname": "connection_name",
+   "label": "Connection Name",
+   "fieldtype": "Data",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "environment",
+   "label": "Environment",
+   "fieldtype": "Select",
+   "options": "Testing\nProduction",
+   "default": "Testing",
+   "reqd": 1
+  },
+  {
+   "fieldname": "enabled",
+   "label": "Active Site Connection",
+   "fieldtype": "Check",
+   "default": "0",
+   "description": "Only one connection can be active. Leads and customers use it automatically."
+  },
+  {
+   "fieldname": "scheduled_sync",
+   "label": "Scheduled Sync",
+   "fieldtype": "Check",
+   "default": "0"
+  },
+  {
+   "fieldname": "sync_interval",
+   "label": "Sync Interval (minutes)",
+   "fieldtype": "Int",
+   "default": "15"
+  },
+  {
+   "fieldname": "endpoint",
+   "label": "Customer List API URL",
+   "fieldtype": "Data",
+   "description": "Full customer-list endpoint without query parameters. HTTP is allowed only with the Testing override."
+  },
+  {
+   "fieldname": "auth_header",
+   "label": "Authentication Header",
+   "fieldtype": "Data",
+   "default": "Authorization"
+  },
+  {
+   "fieldname": "auth_prefix",
+   "label": "Authentication Prefix",
+   "fieldtype": "Data",
+   "default": "Bearer",
+   "description": "Leave blank for a raw API-key header."
+  },
+  {
+   "fieldname": "api_key",
+   "label": "API Key",
+   "fieldtype": "Password"
+  },
+  {
+   "fieldname": "mapping_section",
+   "label": "API Response Mapping",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "records_path",
+   "label": "Customer Array Path",
+   "fieldtype": "Data",
+   "description": "Dot path such as data.customers. Use $ for a root array."
+  },
+  {
+   "fieldname": "field_mapping",
+   "label": "Field Mapping",
+   "fieldtype": "Code",
+   "options": "JSON",
+   "description": "Required: cust_id. Optional: customer_name, phone, email, business_name, onboarding_status, signup_date, onboarded_date, updated_at. Values are JSON dot paths."
+  },
+  {
+   "fieldname": "pagination_mode",
+   "label": "Pagination",
+   "fieldtype": "Select",
+   "options": "Numbered Pages\nSingle Page",
+   "default": "Numbered Pages"
+  },
+  {
+   "fieldname": "page_parameter",
+   "label": "Page Parameter",
+   "fieldtype": "Data",
+   "default": "page"
+  },
+  {
+   "fieldname": "size_parameter",
+   "label": "Page Size Parameter",
+   "fieldtype": "Data",
+   "default": "limit"
+  },
+  {
+   "fieldname": "page_size",
+   "label": "Page Size",
+   "fieldtype": "Int",
+   "default": "100"
+  },
+  {
+   "fieldname": "first_page",
+   "label": "First Page",
+   "fieldtype": "Int",
+   "default": "1"
+  },
+  {
+   "fieldname": "max_pages",
+   "label": "Maximum Pages Per Sync",
+   "fieldtype": "Int",
+   "default": "100"
+  },
+  {
+   "fieldname": "has_more_path",
+   "label": "Has More Response Path",
+   "fieldtype": "Data",
+   "description": "Optional boolean response field. Otherwise a short page ends the sync."
+  },
+  {
+   "fieldname": "updated_since_parameter",
+   "label": "Updated Since Parameter",
+   "fieldtype": "Data",
+   "description": "Leave blank if API cannot filter changed records; each run will fetch the complete list."
+  },
+  {
+   "fieldname": "apply_updates",
+   "label": "Apply Matched Records Automatically",
+   "fieldtype": "Check",
+   "default": "0",
+   "description": "Production only. Disabled means import and preview without modifying CRM."
+  },
+  {
+   "fieldname": "last_success",
+   "label": "Last Successful Sync",
+   "fieldtype": "Datetime",
+   "read_only": 1
+  },
+  {
+   "fieldname": "checkpoint",
+   "label": "Updated Since Checkpoint",
+   "fieldtype": "Datetime",
+   "read_only": 1
+  },
+  {
+   "fieldname": "next_sync",
+   "label": "Next Sync",
+   "fieldtype": "Datetime",
+   "read_only": 1
+  },
+  {
+   "fieldname": "active_run",
+   "label": "Active Run",
+   "fieldtype": "Link",
+   "options": "ShipKia Sync Log",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_error",
+   "label": "Last Error",
+   "fieldtype": "Small Text",
+   "read_only": 1
+  },
+  {
+   "fieldname": "onboarded_values",
+   "label": "Panel Status Values Meaning Onboarded",
+   "fieldtype": "Small Text",
+   "description": "One exact API status value per line. Leave empty until the API contract confirms completion values."
+  },
+  {
+   "fieldname": "http_method",
+   "label": "HTTP Method",
+   "fieldtype": "Select",
+   "options": "GET\nPOST",
+   "default": "GET",
+   "reqd": 1
+  },
+  {
+   "fieldname": "allow_test_http",
+   "label": "Allow HTTP for Testing",
+   "fieldtype": "Check",
+   "default": "0",
+   "description": "Testing connections only. Production requires HTTPS."
+  },
+  {
+   "fieldname": "total_pages_path",
+   "label": "Total Pages Response Path",
+   "fieldtype": "Data",
+   "description": "Optional integer page count, for example result.pages.totalPages."
+  },
+  {
+   "fieldname": "allow_testing_updates",
+   "label": "Allow Updates to Testing-linked CRM Records",
+   "fieldtype": "Check",
+   "default": "0",
+   "description": "Explicitly allows updates only to CRM records linked to this Testing connection."
+  },
+  {
+   "fieldname": "onboarded_on_id",
+   "label": "Treat Matched Customer ID as Onboarded",
+   "fieldtype": "Check",
+   "default": "0",
+   "description": "Business rule: a matching imported CUST ID is sufficient for Onboarded. Does not infer KYC or shipment completion."
+  },
+  {
+   "fieldname": "active_slot",
+   "label": "Active Connection Slot",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "read_only": 1,
+   "unique": 1
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "report": 1,
+   "export": 1
+  }
+ ],
+ "track_changes": 0,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "connection_name"
+}

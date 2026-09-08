@@ -1,0 +1,146 @@
+{
+ "doctype": "DocType",
+ "name": "ShipKia Customer",
+ "module": "Shipkia Lead",
+ "autoname": "hash",
+ "engine": "InnoDB",
+ "field_order": [
+  "connection",
+  "cust_id",
+  "customer_name",
+  "phone",
+  "email",
+  "business_name",
+  "onboarding_status",
+  "signup_date",
+  "onboarded_date",
+  "updated_at",
+  "last_synced",
+  "payload_hash",
+  "raw_response",
+  "match_result",
+  "linked_lead",
+  "linked_customer",
+  "match_note"
+ ],
+ "fields": [
+  {
+   "fieldname": "connection",
+   "label": "API Connection",
+   "fieldtype": "Link",
+   "options": "ShipKia API Connection",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cust_id",
+   "label": "ShipKia CUST ID",
+   "fieldtype": "Data",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "customer_name",
+   "label": "Customer Name",
+   "fieldtype": "Data",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "phone",
+   "label": "Phone",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "email",
+   "label": "Email",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "business_name",
+   "label": "Business Name",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "onboarding_status",
+   "label": "Panel Onboarding Status",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "signup_date",
+   "label": "Panel Signup Date",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "onboarded_date",
+   "label": "Panel Onboarded Date",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "updated_at",
+   "label": "Panel Updated At",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "last_synced",
+   "label": "Last Changed by Sync",
+   "fieldtype": "Datetime",
+   "read_only": 1
+  },
+  {
+   "fieldname": "payload_hash",
+   "label": "Payload Hash",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "raw_response",
+   "label": "Sanitized Customer JSON",
+   "fieldtype": "Code",
+   "options": "JSON",
+   "read_only": 1
+  },
+  {
+   "fieldname": "match_result",
+   "label": "Match Result",
+   "fieldtype": "Select",
+   "options": "Unmatched\nMatched\nNeeds Review\nApplied",
+   "default": "Unmatched",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "linked_lead",
+   "label": "Linked Lead",
+   "fieldtype": "Link",
+   "options": "Lead",
+   "read_only": 1
+  },
+  {
+   "fieldname": "linked_customer",
+   "label": "Linked Customer",
+   "fieldtype": "Link",
+   "options": "Customer",
+   "read_only": 1
+  },
+  {
+   "fieldname": "match_note",
+   "label": "Matching Details",
+   "fieldtype": "Small Text",
+   "read_only": 1
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "report": 1,
+   "export": 1
+  }
+ ],
+ "track_changes": 0,
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

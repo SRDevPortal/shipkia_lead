@@ -1,0 +1,13 @@
+[project]
+name = "shipkia_lead"
+version = "0.1.0"
+description = "ShipKia custom integrations"
+requires-python = ">=3.10"
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["shipkia_lead*"]
+[tool.setuptools]
+include-package-data = true
