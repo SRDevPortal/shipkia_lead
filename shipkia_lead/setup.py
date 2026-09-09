@@ -19,13 +19,15 @@ def after_install():
 
 
 def after_migrate():
+    from shipkia_lead.erpnext_leads import ensure_fields
+    ensure_fields()
     from shipkia_lead.lead_distribution import after_migrate as indexes
     indexes()
     # Restore app shortcuts after upstream ERPNext synchronizes its CRM workspace.
     workspace = frappe.get_doc("Workspace", "CRM")
     content = frappe.parse_json(workspace.content or "[]")
     changed = False
-    for label, target in [("Lead Distribution", "Lead Distribution Rule"), ("ShipKia Connections", "ShipKia API Connection"), ("ShipKia Customers", "ShipKia Customer"), ("ShipKia Sync Logs", "ShipKia Sync Log"), ("ShipKia Matching Queue", "ShipKia Match Queue")]:
+    for label, target in [("Lead Distribution", "Lead Distribution Rule"), ("ShipKia Connections", "ShipKia API Connection"), ("ShipKia Customers", "ShipKia Customer"), ("ShipKia Sync Logs", "ShipKia Sync Log"), ("ShipKia Matching Queue", "ShipKia Match Queue"), ("Legacy CRM Archive", "Shipkia Legacy Record")]:
         if not any(row.link_to == target for row in workspace.shortcuts):
             workspace.append("shortcuts", {"type": "DocType", "label": label, "link_to": target, "color": "Blue"})
             content.append({"id": frappe.scrub(target), "type": "shortcut", "data": {"shortcut_name": label, "col": 3}})

@@ -143,8 +143,14 @@ class TestShipKiaSync(TestCase):
 
 	def test_guest_cannot_sync(self):
 		frappe.set_user("Guest")
-		with self.assertRaises(frappe.PermissionError):
-			sync.sync_now(self.connection.name)
+		# Frappe.only_for intentionally bypasses role checks while in_test is set.
+		previous = frappe.flags.in_test
+		frappe.flags.in_test = False
+		try:
+			with self.assertRaises(frappe.PermissionError):
+				sync.sync_now(self.connection.name)
+		finally:
+			frappe.flags.in_test = previous
 
 	def test_mobile_priority_company_fallback_and_ambiguity(self):
 		mobile = self.lead("mobile", phone="+44 7700-900009")

@@ -5,6 +5,8 @@ app_description = "ShipKia custom integrations"
 app_email = "admin@shipkia.com"
 app_license = "MIT"
 required_apps = ['erpnext']
+permission_query_conditions = {"Lead": "shipkia_lead.permissions.lead_query"}
+has_permission = {"Lead": "shipkia_lead.permissions.lead_permission"}
 
 after_install = "shipkia_lead.setup.after_install"
 after_migrate = "shipkia_lead.setup.after_migrate"
@@ -15,6 +17,7 @@ doctype_js = {
 doctype_list_js = {"Lead": "public/js/lead_list.js"}
 doc_events = {
     "Lead": {
+        "before_validate": "shipkia_lead.erpnext_leads.sync_compatibility_fields",
         "validate": ["shipkia_lead.shipkia_active_connection.assign_connection", "shipkia_lead.shipkia_onboarding.update_status", "shipkia_lead.shipkia_matching.set_keys"],
         "on_change": ["shipkia_lead.lead_distribution.lead_changed", "shipkia_lead.shipkia_matching.changed"],
         "after_delete": "shipkia_lead.lead_distribution.lead_changed",

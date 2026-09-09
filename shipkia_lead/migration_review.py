@@ -10,6 +10,8 @@ import frappe
 
 
 def execute():
+	if "crm" not in frappe.get_installed_apps():
+		return {"crm_installed": False, "migration_required": False, "lead_doctype": "Lead"}
 	root = Path(frappe.get_site_path("private", "files", "erpnext-lead-migration", "review"))
 	root.mkdir(parents=True, exist_ok=True)
 	modules = frappe.get_all("Module Def", filters={"app_name": "crm"}, pluck="name")

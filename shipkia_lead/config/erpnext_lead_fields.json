@@ -1,0 +1,1104 @@
+[
+  {
+    "fieldname": "legacy_crm_lead",
+    "label": "Original Frappe CRM Lead ID",
+    "fieldtype": "Data",
+    "read_only": 1,
+    "module": "Shipkia Lead"
+  },
+  {
+    "fieldname": "legacy_crm_status",
+    "label": "Original Frappe CRM Status",
+    "fieldtype": "Data",
+    "read_only": 1,
+    "module": "Shipkia Lead"
+  },
+  {
+    "fieldname": "converted",
+    "label": "Converted",
+    "fieldtype": "Check",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "email",
+    "label": "Email",
+    "fieldtype": "Small Text",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0,
+    "hidden": 1
+  },
+  {
+    "fieldname": "shipkia_source_lead_id",
+    "label": "Source Lead ID",
+    "fieldtype": "Small Text",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_platform",
+    "label": "Platform",
+    "fieldtype": "Select",
+    "options": "\nFacebook\nInstagram\nWebsite\nWhatsApp\nGoogle\nLinkedIn\nOther",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_campaign_id",
+    "label": "Campaign ID",
+    "fieldtype": "Small Text",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_adset_id",
+    "label": "Ad Set ID",
+    "fieldtype": "Small Text",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_adset_name",
+    "label": "Ad Set Name",
+    "fieldtype": "Small Text",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_ad_id",
+    "label": "Ad ID",
+    "fieldtype": "Small Text",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_ad_name",
+    "label": "Ad Name",
+    "fieldtype": "Small Text",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_form_id",
+    "label": "Form ID",
+    "fieldtype": "Small Text",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_lead_details",
+    "label": "Ad Lead Details",
+    "fieldtype": "Long Text",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_utm_source",
+    "label": "UTM Source",
+    "fieldtype": "Small Text",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_utm_medium",
+    "label": "UTM Medium",
+    "fieldtype": "Small Text",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_utm_campaign",
+    "label": "UTM Campaign",
+    "fieldtype": "Small Text",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_utm_term",
+    "label": "UTM Term",
+    "fieldtype": "Small Text",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_utm_content",
+    "label": "UTM Content",
+    "fieldtype": "Small Text",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_lead_source",
+    "label": "ShipKia Lead Source",
+    "fieldtype": "Small Text",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_first_contact_channel",
+    "label": "ShipKia First Contact Channel",
+    "fieldtype": "Small Text",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_source_reference",
+    "label": "ShipKia Source Reference",
+    "fieldtype": "Small Text",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_raw_payload",
+    "label": "Raw Payload",
+    "fieldtype": "JSON",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "organization",
+    "label": "Organization",
+    "fieldtype": "Small Text",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0,
+    "hidden": 1
+  },
+  {
+    "fieldname": "shipkia_business_type",
+    "label": "Business Type",
+    "fieldtype": "Select",
+    "options": "D2C\nMarketplace Seller\nRetailer\nManufacturer\nDistributor\nOther\nB2C",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_business_name",
+    "label": "Imported Business Name (ShipKia)",
+    "fieldtype": "Small Text",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_business_platform",
+    "label": "ShipKia Business Platform",
+    "fieldtype": "Small Text",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_instagram_url",
+    "label": "Instagram URL",
+    "fieldtype": "Small Text",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_shopify_store_url",
+    "label": "Shopify Store URL",
+    "fieldtype": "Small Text",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_pincode",
+    "label": "Pincode",
+    "fieldtype": "Small Text",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_wa_conversation",
+    "label": "WhatsApp Conversation",
+    "fieldtype": "Link",
+    "options": "Chat Conversation",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_wa_outreach_status",
+    "label": "WhatsApp Sales Status",
+    "fieldtype": "Select",
+    "options": "\nReady\nQueued\nTemplate Sent\nCustomer Replied\nAgent Active\nHuman Handoff\nMissing Phone\nConfiguration Required\nFailed",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_wa_outreach_error",
+    "label": "WhatsApp Outreach Error",
+    "fieldtype": "Small Text",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_monthly_shipments",
+    "label": "Monthly Shipments",
+    "fieldtype": "Int",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_current_aggregator_status",
+    "label": "ShipKia Current Aggregator Status",
+    "fieldtype": "Small Text",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_current_aggregator_name",
+    "label": "ShipKia Current Aggregator Name",
+    "fieldtype": "Small Text",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_current_aggregator_raw",
+    "label": "ShipKia Current Aggregator Raw",
+    "fieldtype": "Small Text",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_current_aggregator_verified",
+    "label": "ShipKia Current Aggregator Verified",
+    "fieldtype": "Check",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_pickup_pincode",
+    "label": "Pickup Pincode",
+    "fieldtype": "Small Text",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_delivery_zones",
+    "label": "Delivery Zones",
+    "fieldtype": "Small Text",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_cod_required",
+    "label": "COD Required",
+    "fieldtype": "Check",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_current_provider_type",
+    "label": "ShipKia Current Provider Type",
+    "fieldtype": "Select",
+    "options": "Direct Courier\nShipping Aggregator\nOwn Arrangement\nOther\nNot Shared",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_current_courier_partner",
+    "label": "Current Courier Partner",
+    "fieldtype": "Small Text",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_current_weight_slab",
+    "label": "Weight Slab",
+    "fieldtype": "Small Text",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_current_shipping_rate",
+    "label": "Price for Weight Slab",
+    "fieldtype": "Currency",
+    "options": "",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_rto_percentage",
+    "label": "ShipKia RTO Percentage",
+    "fieldtype": "Percent",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_pickup_city",
+    "label": "ShipKia Pickup City",
+    "fieldtype": "Small Text",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_delivery_city",
+    "label": "ShipKia Delivery City",
+    "fieldtype": "Small Text",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_average_weight",
+    "label": "ShipKia Average Weight",
+    "fieldtype": "Float",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_rate_shared",
+    "label": "ShipKia Rate Shared",
+    "fieldtype": "Check",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_ai_qualification_score",
+    "label": "ShipKia AI Qualification Score",
+    "fieldtype": "Float",
+    "precision": "2",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_ai_messages_count",
+    "label": "ShipKia AI Messages Count",
+    "fieldtype": "Int",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_ai_details_collected",
+    "label": "ShipKia AI Details Collected",
+    "fieldtype": "Int",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_ai_last_message_at",
+    "label": "ShipKia AI Last Message At",
+    "fieldtype": "Datetime",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_context_updated_at",
+    "label": "ShipKia Context Updated At",
+    "fieldtype": "Datetime",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_context_completed",
+    "label": "ShipKia Context Completed",
+    "fieldtype": "Check",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_ai_context_complete",
+    "label": "ShipKia AI Context Complete",
+    "fieldtype": "Check",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_requirement_details",
+    "label": "ShipKia Requirement Details",
+    "fieldtype": "Small Text",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_lead_temperature",
+    "label": "ShipKia Lead Temperature",
+    "fieldtype": "Select",
+    "options": "Cold\nWarm\nHot",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_ai_lead_temperature",
+    "label": "ShipKia AI Lead Temperature",
+    "fieldtype": "Select",
+    "options": "Cold\nWarm\nHot",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_qualification_status",
+    "label": "ShipKia Qualification Status",
+    "fieldtype": "Small Text",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_ai_qualification_status",
+    "label": "ShipKia AI Qualification Status",
+    "fieldtype": "Small Text",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_ai_onboarding_stage",
+    "label": "ShipKia AI Onboarding Stage",
+    "fieldtype": "Small Text",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_ai_onboarding_assisted",
+    "label": "ShipKia AI Onboarding Assisted",
+    "fieldtype": "Check",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_sales_stage",
+    "label": "ShipKia Sales Stage",
+    "fieldtype": "Small Text",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_service_scope_status",
+    "label": "ShipKia Service Scope Status",
+    "fieldtype": "Small Text",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_disqualification_reason",
+    "label": "ShipKia Disqualification Reason",
+    "fieldtype": "Small Text",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_max_shipment_weight_kg",
+    "label": "ShipKia Maximum Shipment Weight (kg)",
+    "fieldtype": "Float",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_rate_card",
+    "label": "Rate Card",
+    "fieldtype": "Attach",
+    "options": "",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_current_rate_basis",
+    "label": "ShipKia Current Rate Basis",
+    "fieldtype": "Small Text",
+    "options": "",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_main_pain_point",
+    "label": "Main Pain Point",
+    "fieldtype": "Select",
+    "options": "\nHigh Rates\nPickup Issue\nRTO Issue\nTracking Issue\nCOD Remittance\nSupport Issue\nIntegration Issue\nOther",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_proposed_solution",
+    "label": "ShipKia Proposed Solution",
+    "fieldtype": "Small Text",
+    "options": "",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_interested_services",
+    "label": "Interested Services",
+    "fieldtype": "Small Text",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_chatbot_status",
+    "label": "AI Stage",
+    "fieldtype": "Select",
+    "options": "Not Started\nIn Progress\nQualified\nNot Qualified\nConverted\nHuman Required",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_chat_summary",
+    "label": "Chat Summary",
+    "fieldtype": "Text",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_customer_intent_score",
+    "label": "Customer Intent Score",
+    "fieldtype": "Int",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_objections",
+    "label": "Objections",
+    "fieldtype": "Small Text",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_required_follow_up",
+    "label": "Required Follow-up",
+    "fieldtype": "Check",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_next_follow_up_date",
+    "label": "Next Follow-up Date",
+    "fieldtype": "Datetime",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_lead_stage",
+    "label": "Lead Stage",
+    "fieldtype": "Select",
+    "options": "\nNew\nContacted\nQualified\nDemo Scheduled\nNegotiation\nWon\nLost",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_expected_monthly_revenue",
+    "label": "Expected Monthly Revenue",
+    "fieldtype": "Currency",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_final_agreed_rate_plan",
+    "label": "Final Agreed Rate Plan",
+    "fieldtype": "Small Text",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_conversion_date",
+    "label": "Conversion Date",
+    "fieldtype": "Date",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "shipkia_lost_reason",
+    "label": "Lost Reason",
+    "fieldtype": "Small Text",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "vobiz_do_not_call",
+    "label": "Do Not Call",
+    "fieldtype": "Check",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "vobiz_do_not_call_reason",
+    "label": "Do Not Call Reason",
+    "fieldtype": "Small Text",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "vobiz_last_call_status",
+    "label": "Last Call Status",
+    "fieldtype": "Small Text",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "vobiz_last_call_time",
+    "label": "Last Call Time",
+    "fieldtype": "Datetime",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "vobiz_last_called_by",
+    "label": "Last Called By",
+    "fieldtype": "Link",
+    "options": "User",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "vobiz_last_disposition",
+    "label": "Last Disposition",
+    "fieldtype": "Small Text",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "vobiz_next_follow_up",
+    "label": "Next Follow-up",
+    "fieldtype": "Datetime",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "vobiz_total_call_attempts",
+    "label": "Total Call Attempts",
+    "fieldtype": "Int",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "vobiz_connected_call_count",
+    "label": "Connected Call Count",
+    "fieldtype": "Int",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "vobiz_missed_call_count",
+    "label": "Missed Call Count",
+    "fieldtype": "Int",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "vobiz_last_call_event",
+    "label": "Last Vobiz Event",
+    "fieldtype": "Small Text",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "vobiz_call_direction",
+    "label": "Last Vobiz Direction",
+    "fieldtype": "Small Text",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "vobiz_call_duration",
+    "label": "Last Vobiz Duration",
+    "fieldtype": "Duration",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "vobiz_caller_classification",
+    "label": "Vobiz Caller Type",
+    "fieldtype": "Select",
+    "options": "\nNew Lead\nOld Lead",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "vobiz_latest_query_time",
+    "label": "Latest Vobiz Query Time",
+    "fieldtype": "Datetime",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "vobiz_call_alert_count",
+    "label": "Vobiz Call Alerts",
+    "fieldtype": "Int",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "vobiz_calls_seen_at",
+    "label": "Vobiz Calls Seen At",
+    "fieldtype": "Datetime",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "vobiz_latest_call_time",
+    "label": "Latest Vobiz Call Time",
+    "fieldtype": "Datetime",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "vobiz_latest_call_log",
+    "label": "Latest Vobiz Call Log",
+    "fieldtype": "Link",
+    "options": "Vobiz Call Log",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "vobiz_ai_intent",
+    "label": "Latest AI Intent",
+    "fieldtype": "Small Text",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "vobiz_ai_summary",
+    "label": "Latest AI Summary",
+    "fieldtype": "Long Text",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "vobiz_ai_concerns",
+    "label": "Latest AI Concerns",
+    "fieldtype": "Long Text",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "vobiz_recording_url",
+    "label": "Latest Recording URL",
+    "fieldtype": "Small Text",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "vobiz_kamal_involved",
+    "label": "Kamal Involved",
+    "fieldtype": "Check",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "vobiz_transcription_text",
+    "label": "Latest Transcript",
+    "fieldtype": "Long Text",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "po_total_requested",
+    "label": "Total Requested",
+    "fieldtype": "Currency",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "po_total_paid",
+    "label": "Total Paid",
+    "fieldtype": "Currency",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "po_total_allocated",
+    "label": "Total Allocated",
+    "fieldtype": "Currency",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "po_total_unallocated",
+    "label": "Total Unallocated",
+    "fieldtype": "Currency",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "po_last_payment_intent",
+    "label": "Last Payment Intent",
+    "fieldtype": "Link",
+    "options": "Payment Intent",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "communication_status",
+    "label": "Communication Status",
+    "fieldtype": "Small Text",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "sr_dup_hit_count",
+    "label": "Dup Hit Count",
+    "fieldtype": "Int",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "sr_is_duplicate",
+    "label": "Is Duplicate",
+    "fieldtype": "Check",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "sr_duplicate_of",
+    "label": "Duplicate Of",
+    "fieldtype": "Link",
+    "options": "Lead",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "sr_is_archived",
+    "label": "Archived (Hidden)",
+    "fieldtype": "Check",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "sr_mobile_norm",
+    "label": "Mobile (Normalized)",
+    "fieldtype": "Data",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "sr_duplicate_score",
+    "label": "Duplicate Score",
+    "fieldtype": "Float",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  },
+  {
+    "fieldname": "sr_dup_candidates_json",
+    "label": "Dup Candidates (JSON)",
+    "fieldtype": "Small Text",
+    "precision": "",
+    "module": "Shipkia Lead",
+    "insert_after": "legacy_crm_status",
+    "reqd": 0
+  }
+]
