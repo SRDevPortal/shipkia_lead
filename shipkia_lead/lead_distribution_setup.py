@@ -37,6 +37,12 @@ def execute():
 			"fieldtype": "Tab Break",
 			"insert_after": "other_info_tab",
 		},
+		{
+			"fieldname": "shipkia_tab",
+			"label": "ShipKia",
+			"fieldtype": "Tab Break",
+			"insert_after": "organization_section",
+		},
 	]
 	previous = "lead_origin_tab"
 	for name, label, kind, options in [
