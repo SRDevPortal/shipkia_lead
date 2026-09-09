@@ -11,3 +11,6 @@ where = ["."]
 include = ["shipkia_lead*"]
 [tool.setuptools]
 include-package-data = true
+
+[tool.bench.frappe-dependencies]
+frappe = ">=15.0.0,<16.0.0"
