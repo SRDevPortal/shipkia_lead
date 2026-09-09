@@ -1,5 +1,25 @@
 # ShipKia Lead
 
+## Fresh installs and retries
+
+Requires Frappe/ERPNext v15. Frappe Cloud reads the supported version range
+from `pyproject.toml`; it includes Frappe 15.120.0.
+
+Setup creates its own Lead tabs and integration fields. Optional links to
+WhatsApp conversations, Vobiz calls and payment intents are created only when
+their target DocTypes exist. After adding an optional integration app, run
+`bench --site SITE migrate` to add its fields.
+
+Installation and migration check for incomplete core setup and finish missing
+fields. Existing complete layouts and unrelated custom fields are preserved.
+If installation was interrupted, update to the latest `develop` commit and
+retry installation; if Frappe already lists the app as installed, run migration.
+
+Clean-site verification on 2026-09-09 used only Frappe 15.116.0, ERPNext 15.118.0,
+Insights 3.12.2 and the two ShipKia apps. Both installed and migrated successfully;
+87 combined tests and repeated setup checks passed. This is not an execution
+test against Frappe 15.120.0. External API calls were mocked in tests.
+
 Custom ERPNext Lead distribution, ShipKia account imports and matching, onboarding,
 Lead/Customer fields and UI actions. Requires ERPNext. Frappe CRM is not required.
 

@@ -8,14 +8,14 @@ from frappe.custom.doctype.custom_field.custom_field import create_custom_fields
 
 def ensure_fields():
     path = Path(__file__).parent / "config" / "erpnext_lead_fields.json"
-    definitions = json.loads(path.read_text()) if path.exists() else []
+    definitions = json.loads(path.read_text())
+    # Optional integration apps are not prerequisites for Shipkia Lead.
+    definitions = [df for df in definitions if df.get("fieldtype") != "Link"
+        or frappe.db.exists("DocType", df.get("options"))]
     meta = frappe.get_meta("Lead")
     missing = [df for df in definitions if not meta.has_field(df["fieldname"])
         or (not frappe.db.has_column("Lead", df["fieldname"]) and frappe.db.exists("Custom Field", {"dt": "Lead", "fieldname": df["fieldname"]}))]
-    # Clean up only metadata from an interrupted schema addition, never stored columns.
-    for df in frappe.get_all("Custom Field", filters={"dt": "Lead", "module": "Shipkia Lead"}, fields=["name", "fieldname"]):
-        if df.fieldname not in {d["fieldname"] for d in definitions} and not frappe.db.has_column("Lead", df.fieldname):
-            frappe.db.delete("Custom Field", {"name": df.name})
+    # Keep unrelated custom fields and layout fields; layout fields have no DB column.
     if missing:
         create_custom_fields({"Lead": missing}, update=True)
 

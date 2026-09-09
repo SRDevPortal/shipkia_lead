@@ -7,7 +7,19 @@ def after_install():
     for name in ("lead_distribution_rule", "lead_distribution_user", "shipkia_api_connection", "shipkia_customer", "shipkia_match_queue", "shipkia_sync_log"):
         frappe.reload_doc("shipkia_lead", "doctype", name, force=True)
     frappe.clear_cache()
-    if not frappe.get_meta("Lead").has_field("shipkia_identity"):
+    after_migrate()
+
+
+def ensure_core_setup():
+    # A failed install may have written identity fields but not finished setup.
+    required = {"Lead": ("shipkia_tab", "shipkia_cust_id", "shipkia_connection", "shipkia_identity",
+        "shipkia_onboarding_status", "sk_phone_0", "sk_business_0", "source_medium", "source_campaign_name"),
+        "Customer": ("shipkia_cust_id", "shipkia_connection", "shipkia_identity", "shipkia_onboarding_status"),
+        "ShipKia Customer": ("sk_phone_key", "sk_business_key")}
+    complete = all(frappe.get_meta(dt).has_field(field) and frappe.db.has_column(dt, field)
+        for dt, fields in required.items() for field in fields if field != "shipkia_tab")
+    complete = complete and frappe.get_meta("Lead").has_field("shipkia_tab")
+    if not complete:
         from shipkia_lead.lead_distribution_setup import execute
         developer = frappe.conf.developer_mode
         frappe.conf.developer_mode = 0
@@ -15,10 +27,10 @@ def after_install():
             execute()
         finally:
             frappe.conf.developer_mode = developer
-    after_migrate()
 
 
 def after_migrate():
+    ensure_core_setup()
     from shipkia_lead.erpnext_leads import ensure_fields
     ensure_fields()
     from shipkia_lead.lead_distribution import after_migrate as indexes
